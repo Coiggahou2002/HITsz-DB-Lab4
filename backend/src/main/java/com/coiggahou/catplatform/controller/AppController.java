@@ -29,97 +29,97 @@ public class AppController {
 
     @ApiOperation("用户登录")
     @PostMapping("user_login")
-    ApiResponse userLogin(@RequestBody User user) {
+    public ApiResponse userLogin(@RequestBody User user) {
         return userService.login(user);
     }
 
     @ApiOperation("用户注册")
     @PostMapping("user_register")
-    ApiResponse userRegister(@RequestBody User user) {
+    public ApiResponse userRegister(@RequestBody User user) {
         return userService.register(user);
     }
 
     @ApiOperation("获得所有猫的信息")
     @GetMapping("list_all_cats")
-    List<CatDTO> listAllCats() {
+    public List<CatDTO> listAllCats() {
         return catService.listAll();
     }
 
     @ApiOperation("更新指定猫的信息")
     @PostMapping("update_cat")
-    boolean updateCat(@RequestBody Cat cat) {
+    public boolean updateCat(@RequestBody Cat cat) {
         return catService.updateCat(cat);
     }
 
     @ApiOperation("添加单只猫信息")
     @PostMapping("add_cat")
-    boolean addCat(@RequestBody Cat cat) {
+    public boolean addCat(@RequestBody Cat cat) {
         return catService.addCat(cat);
     }
 
     @ApiOperation("根据id删除指定猫信息")
     @PostMapping("remove_cat_by_id")
-    boolean removeCatById(@RequestParam String id) {
+    public boolean removeCatById(@RequestParam String id) {
         return catService.removeCatById(id);
     }
 
     @ApiOperation("根据id获取指定猫信息")
     @GetMapping("get_cat_by_id")
-    CatDTO getCatById(@RequestParam String id) {
+    public CatDTO getCatById(@RequestParam String id) {
         return catService.getById(id);
     }
 
     @ApiOperation("获取所有颜色")
     @GetMapping("list_all_colors")
-    List<Color> listAllColors() {
+    public List<Color> listAllColors() {
         return catService.listAllColors();
     }
 
     @ApiOperation("获取所有性格")
     @GetMapping("list_all_characters")
-    List<Character> listAllCharacters() {
+    public List<Character> listAllCharacters() {
         return catService.listAllCharacters();
     }
 
     @ApiOperation("获取所有猫品种")
     @GetMapping("list_all_cat_types")
-    List<CatType> listAllCatTypes() {
+    public List<CatType> listAllCatTypes() {
         return catService.listAllCatTypes();
     }
 
     @ApiOperation("获取所有食物")
     @GetMapping("list_all_foods")
-    List<Food> listAllFoods() {
+    public List<Food> listAllFoods() {
         return catService.listAllFoods();
     }
 
     @ApiOperation("获取所有地点")
     @GetMapping("list_all_locations")
-    List<Location> listAllLocations() {
+    public List<Location> listAllLocations() {
         return catService.listAllLocations();
     }
 
     @ApiOperation("猫猫签到接口")
     @PostMapping("check")
-    boolean check(@RequestBody CheckRecord checkRecord) {
+    public boolean check(@RequestBody CheckRecord checkRecord) {
         return catService.check(checkRecord);
     }
 
     @ApiOperation("获取所有猫猫打卡记录")
     @GetMapping("list_all_check_records")
-    List<CheckRecordDTO> listAllCheckRecords() {
+    public List<CheckRecordDTO> listAllCheckRecords() {
         return catService.listAllCheckRecords();
     }
 
     @ApiOperation("猫猫投喂登记接口")
     @PostMapping("feed")
-    boolean feed(@RequestBody FeedRecord feedRecord) {
+    public boolean feed(@RequestBody FeedRecord feedRecord) {
         return catService.feed(feedRecord);
     }
 
     @ApiOperation("获取所有投喂记录")
     @GetMapping("list_all_feed_records")
-    List<FeedRecordDTO> listAllFeedRecords() {
+    public List<FeedRecordDTO> listAllFeedRecords() {
         return catService.listAllFeedRecords();
     }
 }

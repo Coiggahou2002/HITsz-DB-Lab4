@@ -8,13 +8,16 @@ import com.coiggahou.catplatform.dto.FeedRecordDTO;
 import com.coiggahou.catplatform.entity.*;
 import com.coiggahou.catplatform.entity.Character;
 import com.coiggahou.catplatform.mapper.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.NoHandlerFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Slf4j
 public class CatServiceImpl implements CatService {
 
     @Autowired
