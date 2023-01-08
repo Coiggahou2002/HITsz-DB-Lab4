@@ -12,7 +12,7 @@
           />
         </el-select>
       </el-form-item>
-      <el-form-item label="投喂食物">
+      <el-form-item label="位置">
         <el-select v-model="form.locationId" placeholder="选择位置">
           <el-option
               v-for="location in locations"
@@ -23,7 +23,7 @@
         </el-select>
       </el-form-item>
       <el-form-item label="投喂食物">
-        <el-select v-model="form.foodId" placeholder="选择要打卡的猫">
+        <el-select v-model="form.foodId" placeholder="选择投喂的食物">
           <el-option
               v-for="food in foods"
               :key="food.id"
